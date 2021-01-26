@@ -1,21 +1,20 @@
 import React from 'react';
-import BooksListItem from './BooksListItem';
+import AuthorsListItem from './AuthorsListItem';
 
-export default class BooksList extends React.Component {   
+export default class AuthorList extends React.Component {  
+
     render() {
         return (
             <table className="table table-striped table-bordered table-hover">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Author name</th>
+                        <th>Author</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {this.props.list.map(item => (
-                      <BooksListItem key={item.id} data={item} authors={this.props.author_name}/>  
+                    {this.props.author.map(item => (
+                      <AuthorsListItem key={item.id} data={item} />  
                     ))}
                     
                 </tbody>
